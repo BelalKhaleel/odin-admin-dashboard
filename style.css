@@ -19,7 +19,7 @@
 }
 
 .container {
-  max-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   grid-template-columns: 0.7fr repeat(4, 1fr);
 }
