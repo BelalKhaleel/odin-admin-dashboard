@@ -9,7 +9,7 @@
 @font-face {
     font-family: 'Roboto';
     src: url('./assets/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
-        url('./assets/fonts/Roboto/Roboto-Regular.woff2') format('woff');
+        url('./assets/fonts/Roboto/Roboto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 :root {
   --primary-color: rgb(255, 255, 255);
-  --seconday-color: rgb(226, 232, 240);
+  --secondary-color: rgb(226, 232, 240);
   --accent: rgb(25, 146, 212);
   --text-clr: #636363;
 }
@@ -56,6 +56,7 @@ aside nav {
 aside a {
   color: var(--primary-color);
   text-decoration: none;
+  width: fit-content;
 }
 
 aside svg {
@@ -99,7 +100,7 @@ header {
 .search-bar input {
   width: 100%;
   border-radius: 1rem;
-  background-color: var(--seconday-color);
+  background-color: var(--secondary-color);
   border: none;
   padding: 5px;
 }
@@ -141,8 +142,12 @@ header {
   outline: none;
 }
 
+.header-btn:hover {
+  cursor: pointer;
+}
+
 main {
-  background-color: var(--seconday-color);
+  background-color: var(--secondary-color);
   grid-column: 2 / -1;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -162,11 +167,12 @@ h2 {
 }
 
 .project-card {
+  min-height: 204px;
   background-color: var(--primary-color);
   padding: 1.5rem;
   border-radius: 5px;
   display: grid;
-  grid-template-rows: min-content min-content 4.2rem;
+  grid-template-rows: min-content min-content auto;
   border-left: 7px rgb(240, 180, 41) solid;
 }
 
@@ -175,15 +181,19 @@ h2 {
   margin-bottom: 2px;
 }
 
-.project-card > .project-description {
+.project-description {
   color: var(--text-clr);
 }
 
-.project-card > .card-icons {
+.card-icons {
   display: flex;
   gap: 1rem;
   align-self: end;
   justify-self: flex-end;
+}
+
+.card-icons svg {
+  cursor: pointer;
 }
 
 .side-section {
