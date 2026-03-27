@@ -85,7 +85,8 @@ header {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 10px 3rem;
+  row-gap: 1rem;
+  padding: .5rem 3rem;
   align-items: center;
   font-weight: 900;
   position: relative;
@@ -94,7 +95,7 @@ header {
 
 .search-bar {
   display: flex;
-  gap: 10px;
+  gap: .5rem;
 }
 
 .search-bar input {
@@ -136,7 +137,7 @@ header {
 .header-btn {
   color: var(--primary-color);
   background-color: var(--accent);
-  padding: 10px 2rem;
+  padding: .5rem 2rem;
   border: none;
   border-radius: 50px;
   outline: none;
@@ -152,7 +153,7 @@ main {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 2rem;
-  padding: 1.5rem 2rem 3rem;
+  padding: 2rem 1.5rem 3rem;
 }
 
 h2 {
@@ -167,7 +168,7 @@ h2 {
 }
 
 .project-card {
-  min-height: 204px;
+  min-height: 210px;
   background-color: var(--primary-color);
   padding: 1.5rem;
   border-radius: 5px;
@@ -185,6 +186,10 @@ h2 {
   color: var(--text-clr);
 }
 
+.project-card button {
+  all: unset;
+}
+
 .card-icons {
   display: flex;
   gap: 1rem;
@@ -199,13 +204,15 @@ h2 {
 .side-section {
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
+  gap: 3rem;
 }
 
 .announcements {
   padding: 2rem;
   background: var(--primary-color);
   border-radius: 5px;
+  display: grid;
+  row-gap: 1rem;
 }
 
 .announcement > h3 {
@@ -220,10 +227,6 @@ h2 {
 
 .announcement:not(:last-child) {
   border-bottom: solid 1px rgb(210,210,210);
-}
-
-.announcement:not(:first-child) {
-  padding-top: 1rem;
 }
 
 .trends {
